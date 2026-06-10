@@ -106,7 +106,7 @@ main {
 	width:100px;
 	height:30px;
 	
-	background-image: url(/barra-verde-pequeña.svg); 
+	background-image: url(barra-verde-pequeña.svg); 
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	
@@ -163,7 +163,7 @@ main {
 	box-sizing: border-box;
 
        /* background-image: url(/assets/cabecera-verde.svg);*/
-	background-image: url(/barra-verde-pequeña.svg);	
+	background-image: url(barra-verde-pequeña.svg);	
 
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -200,7 +200,7 @@ main {
 	
 	clear:both;/*Ojo muy importante para dusplay blok float*/
         
-	background-image: url(/barra-verde-pequeña.svg);
+	background-image: url(barra-verde-pequeña.svg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
 
