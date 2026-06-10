@@ -1,0 +1,297 @@
+*{
+	font-family: "Sixtyfour", sans-serif;
+	
+}
+
+.contenedor, .cabecera, .titulo, .barra_de_titulo, .foto-1, .texto, .mas, .foto-pequeña, .texto-error-grande, footer {
+
+	animation: parpadeoGeneral 5s infinite
+
+}
+
+
+@keyframes parpadeoGeneral { /*animacion de parpadeo*/
+  0%, 48%, 52%, 68%, 72%, 100% {
+    opacity: 1;
+    /* Aplica un resplandor neón general a textos e imágenes por igual */
+    filter: drop-shadow(0 0 6px rgba(56, 239, 125, 0.3)); 
+  }
+  49%, 70% {
+    opacity: 0.90; /* Bajada sutil de intensidad */
+    filter: drop-shadow(0 0 4px rgba(56, 239, 125, 0.2));
+  }
+  50% {
+    opacity: 0.98;
+  }
+  71% {
+    opacity: 0.6; /* Micro-parpadeo más notable que afecta a todo a la vez */
+    filter: drop-shadow(0 0 2px rgba(56, 239, 125, 0.1));
+  }
+}
+
+
+html, body{
+
+	overflow-y: auto;
+    	background-color: black;
+    	margin: 0;
+    	padding: 0;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+.capa-scanlines { /*Capa CRT*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Usamos un verde neón muy sutil y transparente en lugar de negro */
+  background: repeating-linear-gradient(
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(56, 239, 125, 0.07) 3px,
+    rgba(56, 239, 125, 0.07) 4px
+  );
+  pointer-events: none; 
+  z-index: 999; 
+}
+
+
+.cabecera{ /*hack my life*/
+
+        display:flex;
+        width: 100%;
+        height:25px;
+	font-size: 10px;
+	color:black;
+        background-color:green;
+        justify-content: center; /* Centra horizontalmente */      
+	align-items: center;
+	
+}
+
+
+
+.contenedor{
+/*	background-color:red;/*mirar lo que ocupa*/
+	margin-left:auto;
+	margin-right:auto;
+	width:97%;
+
+	margin-top: 10px;
+	display:flex;
+	justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */	
+	gap:10px;
+
+}
+
+.barra{/*home news project about*/
+	
+	color:green;
+	font-size: 9.5px;
+	
+	display:flex;
+	width:100px;
+	height:30px;
+	
+	background-image: url(/barra-verde-pequeña.svg); 
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+	justify-content: center; /* Centra horizontalmente */
+  	align-items: center;     /* Centra verticalmente */
+  	
+	text-decoration: none;	
+}
+
+
+	
+.titulo{/*home*/
+
+	height:40px;
+	font-size: 14px;
+	color:green;
+/*	background-color:red;/*mirar lo que ocupa*/
+	display:flex;
+	justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+	border-bottom: 2px solid green;
+	margin-bottom:20px;
+}
+
+
+.contenedor_de_seccion{
+
+     /* background-color:green;/*mirar lo que ocupa*/
+	color:green; /* afecta el color del texto de todo lo que esta adentro*/
+	width:408px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	margin-bottom:15px;
+
+	border-bottom: 2px solid green;
+	overflow-wrap: break-word;
+	/*display:block;/*OJO CON ESTO!!!!!!!!!!!*/
+	
+}
+
+.barra_de_titulo{ /*exacyber saves the day*/
+
+	color:green;
+        font-size: 12px;
+	
+	word-spacing: -4px;/*separacion de las palabras*/
+	letter-spacing: -3px;/*separacion de las letras*/
+	
+        display:flex;
+        width:259px;
+        height:38px;
+	padding-left:23px;	
+	box-sizing: border-box;
+
+       /* background-image: url(/assets/cabecera-verde.svg);*/
+	background-image: url(/barra-verde-pequeña.svg);	
+
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+       /* justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+
+	margin-bottom:20px;
+}
+
+.foto-1{
+	width: 400px;
+	height: auto;
+
+
+}
+
+.texto{
+	
+/*	background-color:red;*/
+	font-size: 9px;
+
+}
+
+/*propiedades dd la barra leer mas*/
+
+.mas{
+
+	color:green;
+        font-size: 11px;
+        display:flex;
+        width:120px;
+        height:31px;
+	
+	clear:both;/*Ojo muy importante para dusplay blok float*/
+        
+	background-image: url(/barra-verde-pequeña.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center;     /* Centra el contenido verticalmente */
+ 	margin-left:auto;
+	margin-bottom:10px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+/*propiedades la las fotos pequeñas*/
+
+.foto-pequeña{
+
+	width: 150px;
+        height: auto;	
+	margin:10px;
+	
+}
+
+/*dispocicion de las fotos pequeñas*/
+
+.foto-pequeña-right{
+	display:block;
+        float:right;
+}
+
+.foto-pequeña-left{
+  	display:block;
+        float:left;
+
+	
+}
+
+.texto-error-grande{
+	display:flex;
+/*	background-color:blue;*/
+	justify-content: center; /* Centra horizontalmente */
+        align-items: center;
+        font-size: 40px;
+	margin:20px;
+
+}
+
+
+.foto-Error-404{
+	display:flex;
+        width: 300px;
+        height: auto;
+	margin:60px auto;
+
+	animation: rotacion 2s ease-in-out infinite alternate, parpadeoGeneral 5s infinite;
+}
+
+
+
+@keyframes rotacion{
+  0%{
+      transform:rotate(10deg);
+  }
+ /* 50% {
+      transform:rotate(0deg);
+  }*/
+  100% {
+     transform:rotate(-10deg);
+  }
+}
+
+footer{
+	border-top: 2px solid green;
+	display:flex;
+        width: 100%;
+        height:25px;
+        font-size: 8px;
+        color:green;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
